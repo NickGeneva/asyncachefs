@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "asyncachefs"
+version = "0.1.0"
+description = "Async cache file system for fsspec"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fsspec>=2025.3.2",
+]
+
+[tool.hatch.version]
+path = "asyncachefs/__version__.py"
+
+[tool.hatch.build.targets.sdist]
+include = ["asyncachefs/**/*.py"]
+exclude = []
+
+[tool.hatch.build.targets.wheel]
+packages = ["asyncachefs"]
+
+[dependency-groups]
+dev = [
+    "gcsfs>=2025.3.2",
+    "zarr>=2.18.3",
+]
