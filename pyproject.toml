@@ -9,7 +9,7 @@ description = "Async cache file system for fsspec"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
-    "fsspec>=2025.3.2",
+    "fsspec>=2024.2.0",
 ]
 
 [tool.hatch.version]
